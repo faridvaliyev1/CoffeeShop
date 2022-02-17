@@ -3,14 +3,14 @@ package data
 import "time"
 
 type Product struct {
-	ID          int
-	Name        string
-	Description string
-	Price       float32
-	SKU         string
-	CreatedOn   string
-	UpdatedOn   string
-	DeletedOn   string
+	ID          int     `json:"Id"`
+	Name        string  `json:"Name"`
+	Description string  `json:"Description"`
+	Price       float32 `json:"Price"`
+	SKU         string  `json:"Sku"`
+	CreatedOn   string  `json:"-"`
+	UpdatedOn   string  `json:"-"`
+	DeletedOn   string  `json:"-"`
 }
 
 var productList = []*Product{
